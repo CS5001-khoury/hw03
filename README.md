@@ -98,26 +98,50 @@ Failed 10 tests.
 
 For this part of the homework, make sure to complete the Design Activity first. You will turn in a PDF of the design activity, and make sure to include all the names of the people who worked with you on it (since it can be done with others).
 
-Based on the activity, you will want to use the [star_rating_app.py](star_rating_app.py) as a template file. While the function names don't matter for production, they do  matter so we can unit test and grade - so please use that template. You an add functions, but do not take away any of the provided functions a we will be using them in our tests. 
+Based on the activity, you will want to use the [star_rating_app.py](star_rating_app.py) as a template file. The function names matter so we can unit test and grade - so please use the template. You can add functions, but do not take away any of the provided functions as we will be using them in our tests. 
 
 
-👉🏽 **Task** Complete the Star Rating App, and submit both star_rating_app.py and test_star_rating_app.py. As testing client input and output can be difficult, only are only required to implement `test_convert_rating()`, but you are recommended to
-add other tests! 
+👉🏽 **Task** Complete the Star Rating App, and submit both star_rating_app.py and test_star_rating_app.py. As testing client input and output can be difficult, as the tests are interactive. That is fine. You can add comments talking about how you did the interactive test. However, the important part is to make sure you test your work before submitting. 
 
+
+## Reflection
+
+👉🏽 **Task** In your README.md add a small paragraph reflection of your learning and progress. Remember, this is not just a list of items, but we encourage you to critically evaluate and think about your learning process. There is a lot of research as to the benefits of reflection and retention of information - especially related to computer science!
 
 ## Grading Rubric
+
+Your final submission will consist of the following files:
+* game_helper.py
+* test_game_helper.py
+* star_rating_app.py
+* test_star_rating_app.py
+* design_star_rating.pdf 
+* README.md
 
 
 Add (AG) and (MG) next to tiers, add major conditions to meet to pass each tier. 
 
-1. Learning ()
-   * 
-2. Approaching  ()
-   * 
-3. Meets  ()
-   * 
-4. Exceeds  ()
-   * 
+1. Learning (AG)
+   * game_helper properly corrected and passes tests
+   * test_game_helper has the required functions
+2. Approaching  (AG)
+   * star_rating_app works with simple entries and ratings
+3. Meets  (AG)
+   * test_game_helper catches errors on another version of game_helper 
+     * Same functions but  may hold different logical errors
+   * star_rating_app works with more complex entry
+     * case change on add,list,exit or doesn't break when using wrong words
+     * properly using constants throughout code
+   * Both game_helper and star_rating pass python style checker
+4. Exceeds  (MG)
+   * test_game_helper.py has at least two tests for every function in game_helper.py
+   * output is accurately reported in README.md
+   * test_star_rating_app has reasonable tests in it
+   * All .py files include proper docstrings - both file header and function level
+   * design_star_rating.pdf has been completed properly 
+     * If you worked as a group on it, you all need to submit even if the document is the same, and include everyone's name on the document
+   * README.md defines syntax errors fixed
+   * README.md includes at least a paragraph reflection.
 
 
 AG - Auto-graded  
@@ -125,4 +149,15 @@ MG - Manually graded
 
 
 ## Additional Resources (optional)
-Use this section to keep the homework description shorter, and instead talk about additional resources down here (such as tools to use, websites to review, etc)
+
+In game_helper.py we make use of **type hints**. These were introduced in Python 3.0, but they weren't really given a purpose until Python 3.5 (PEP 484). It has become common in industry to include them even though python is a dynamically typed language. Dynamically typed means specifying the types are not required as the language will determine the memory needed at runtime. Some languages, like Java which you will learn in CS5004, are strongly typed which means the types are required and strictly enforced at time of programming (compile time). 
+
+Adding the type hints in python is two fold. First, it makes it easier to see what is expected both as the arguments of a function and as the return value of the function. This helps you debug and helps other programmers. Second, there are tools that someone can run against your code to make sure the types are being followed, such as mypy below! This matters for large scale application development.
+
+While not required for this course, you can learn about types hints
+* [mypy](https://mypy.readthedocs.io/en/latest/)
+* [typing library](https://docs.python.org/3/library/typing.html)
+
+Above all, keep it simple! There are far more features in python than we will need. 
+
+Eventually when we move to an IDE other than IDLE, type hints will also make documentation generation easier.
