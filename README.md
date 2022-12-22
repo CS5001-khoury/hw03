@@ -96,8 +96,14 @@ Failed 10 tests.
 
 ## Star Rating App
 
+For this part of the homework, make sure to complete the Design Activity first. You will turn in a PDF of the design activity, and make sure to include all the names of the people who worked with you on it (since it can be done with others).
 
-Highlight each major component with a section, add **task** for tasks and include 👉🏽 or something obvious so they can be found easily. 
+Based on the activity, you will want to use the [star_rating_app.py](star_rating_app.py) as a template file. While the function names don't matter for production, they do  matter so we can unit test and grade - so please use that template. You an add functions, but do not take away any of the provided functions a we will be using them in our tests. 
+
+
+👉🏽 **Task** Complete the Star Rating App, and submit both star_rating_app.py and test_star_rating_app.py. As testing client input and output can be difficult, only are only required to implement `test_convert_rating()`, but you are recommended to
+add other tests! 
+
 
 ## Grading Rubric
 
