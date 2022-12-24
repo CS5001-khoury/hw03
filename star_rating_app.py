@@ -38,6 +38,10 @@ def menu():
 def run(movies: str = '') -> None:
     """
     Runs the star rating application.
+
+    Args:
+       The movie string, keeping track
+       of all movies added between menu calls.
     """
     command = '' # update with your code
 

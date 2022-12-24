@@ -96,12 +96,12 @@ Failed 10 tests.
 
 ## Star Rating App
 
-For this part of the homework, make sure to complete the Design Activity first. You will turn in a PDF of the design activity, and make sure to include all the names of the people who worked with you on it (since it can be done with others).
+For this part of the homework, make sure to complete the [Design Activity](https://github.com/CS5001-khoury/Handouts/raw/main/Module3/design_star_rating_app.docx) first. You will turn in a PDF of the design activity, and make sure to include all the names of the people who worked with you on it (since it can be done with others). 
 
 Based on the activity, you will want to use the [star_rating_app.py](star_rating_app.py) as a template file. The function names matter so we can unit test and grade - so please use the template. You can add functions, but do not take away any of the provided functions as we will be using them in our tests. 
 
 
-👉🏽 **Task** Complete the Star Rating App, and submit both star_rating_app.py and test_star_rating_app.py. As testing client input and output can be difficult, as the tests are interactive. That is fine. You can add comments talking about how you did the interactive test. However, the important part is to make sure you test your work before submitting. 
+👉🏽 **Task** Complete the Star Rating App, and submit both star_rating_app.py and test_star_rating_app.py. Note that testing client input and output can be difficult, as the tests are interactive. That is fine. You can add comments talking about how you did the interactive test. However, the important part is to make sure you test your work before submitting. 
 
 
 ## Reflection
@@ -110,6 +110,7 @@ Based on the activity, you will want to use the [star_rating_app.py](star_rating
 
 ## Grading Rubric
 
+### Files
 Your final submission will consist of the following files:
 * game_helper.py
 * test_game_helper.py
@@ -119,8 +120,7 @@ Your final submission will consist of the following files:
 * README.md
 
 
-Add (AG) and (MG) next to tiers, add major conditions to meet to pass each tier. 
-
+### Rubric
 1. Learning (AG)
    * game_helper properly corrected and passes tests
    * test_game_helper has the required functions
