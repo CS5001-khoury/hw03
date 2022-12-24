@@ -60,6 +60,7 @@ from .game_helper import area_sq, area_rec, vol_cube, area_triangle, can_add, ro
 * while the above line is not standard, it will help with path conflict issues with the auto-grader.
 * In each function, you must write **at least two** tests to test each function. The test function will return the number of tests failed, while also printing information about the tests!
 * Finally, you should add a main function that calls all the tests, and then prints out the total tests failed. 
+  * The last line printed **has** to be 'Failed # tests.' where # is the number of tests failed.
 
 Here is an example run using our test_game_helper.py.
 
