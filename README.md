@@ -149,7 +149,7 @@ AG - Auto-graded
 MG - Manually graded
 
 
-## Additional Resources (optional)
+## 📚 Additional Resources
 
 In game_helper.py we make use of **type hints**. These were introduced in Python 3.0, but they weren't really given a purpose until Python 3.5 (PEP 484). It has become common in industry to include them even though python is a dynamically typed language. Dynamically typed means specifying the types are not required as the language will determine the memory needed at runtime. Some languages, like Java which you will learn in CS5004, are strongly typed which means the types are required and strictly enforced at time of programming (compile time). 
 
