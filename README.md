@@ -52,6 +52,7 @@ Download [game_helper.py](game_helper.py). It is a file with a series of isolate
 
 👉🏽 **Task** Create a file called **test_game_helper.py**. 
 * Include the standard docstring at the top of the file you have seen in all your other assignment files. 
+* We have provided a template file [test_game_helper.py](test_game_helper.py) as an example.
 * Write a test for *every* function in game_helper.py, each test should be labeled test_function. For example, a function that tests `area_sq(length: float)`, the function you write should be called `test_area_sq()`.
 * To help with the auto-grader, please use the following import line  
 ```python
