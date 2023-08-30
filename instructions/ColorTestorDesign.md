@@ -136,6 +136,11 @@ will print out.
 The spacing before the word and after are `\t` characters, so your
 spacing may vary. 
 
+#### Args
+* red (int): red color value
+* green (int): green color value
+* blue (int): blue color value
+
 #### Flow Diagram
 Using the example above with (230,13,255) the flow diagram could be.
 
@@ -157,5 +162,60 @@ flowchart LR
 
 1., 2., 3., 4. represent paired method calls and returns since rgb_to_hex is called four times at a minimum. The None return for `print` is not
 shown for simplicity. 
+
+
+### run_checks
+
+Checks to see if there is a difference between two colors
+for standard vision, Protanopia, Deuteranopia, Tritanopia. Will
+print out if there is a difference or not before
+returning the result. 
+
+For example, if the following is called
+```run_checks(230, 13,255, 123,200,255)``` run Checks will
+print.
+
+```
+Normal vision:  Different
+Protanopia:  Too similar
+Deuteranopia:  Different
+Tritanopia:  Different
+```
+and then return `False`. Only a single space is used between words, and no
+indent. 
+
+#### Args:
+* red_one (int): a color range between 0 and 255 representing the red for the first color
+* green_one (int): a color range between 0 and 255 representing the green for the first color
+* blue_one (int):a color range between 0 and 255 representing the blue for the first color
+* red_two (int): a color range between 0 and 255 representing the red for the second color
+* green_two (int): a color range between 0 and 255 representing the green for the second color
+* blue_two (int): a color range between 0 and 255 representing the blue for the second color
+
+
+#### Returns:
+bool: True if every color is different under all vision types, but False if only one vision type the colors are two similar.
+
+
+#### Flow Diagram
+Using the example above with (230, 13,255) as the first color and (123,200,255) as the second color the flow diagram could be.
+
+```mermaid 
+flowchart LR
+main -- 230,13,255,123,200,255 --> run_checks
+run_checks -- 230,13,255,123,200,255 --> different_colors
+run_checks -- 230,13,255,123,200,255 --> check_protanopia
+run_checks -- 230,13,255,123,200,255 --> check_deuteranopia
+run_checks -- 230,13,255,123,200,255 --> check_tritanopia
+different_colors -- True --> run_checks
+check_protanopia -- False --> run_checks
+check_deuteranopia -- True --> run_checks
+check_tritanopia -- True --> run_checks
+run_checks -- False --> main
+
+```
+ Important! Calls to print are left out for simplicity of the diagram! See
+ example run to see how it will print. 
+
 
 ### `main()`
