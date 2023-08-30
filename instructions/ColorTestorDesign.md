@@ -218,4 +218,50 @@ run_checks -- False --> main
  example run to see how it will print. 
 
 
-### `main()`
+
+
+### `main`
+
+The main driver of the program. Will print a welcoming, then
+prompt the client to enter red, green, and blue values 
+for one color, and then red, blue, and green for a second color. 
+
+It will then print the HTML values for color 1 with the colorblind filters
+applied, and the HTML values for Color 2 with the colorblind filters
+applied using ``print_html_values`.
+
+It will then call `run_checks` to print if the colors are different given
+the colorblind filters, followed by stating the colors are `different`
+or `too similar` using the return value of `run_checks` before
+ending the program. 
+
+For example:
+
+Assume the client enters (230, 13,255) for the first color, and (123,200,255) for the second color.
+```text
+Welcome to color checker.
+Enter the RGB values for two colors.
+Enter your first color:
+Red: 230
+Green: 13
+Blue: 255
+Enter your second color:
+Red: 123
+Green: 200
+Blue: 255
+The HTML values for the Color 1 are: 
+	Standard:   #e60dff
+	Protanopia: #0000ff
+	Deuteranopia:   #e600ff
+	Tritanopia: #e60d00
+The HTML values for the Color 2 are: 
+	Standard:	 #7bc8ff
+	Protanopia:	 #0000ff
+	Deuteranopia:	 #7b00ff
+	Tritanopia:	 #7bc800
+Normal vision:  Different
+Protanopia:  Too similar
+Deuteranopia:  Different
+Tritanopia:  Different
+The colors are too similar.
+```
