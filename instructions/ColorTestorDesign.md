@@ -218,6 +218,65 @@ run_checks -- False --> main
  example run to see how it will print. 
 
 
+### get_number_from_client
+
+Gets a number from a client using input.
+
+#### Example
+
+If someone calls `get_number_from_client` with the argument of "Red:". The
+client will be prompted "Red:". In this case, they will enter 155, and it will simply return 155.
+
+HOWEVER if the client enters a value greater than 255 or less than 0, 
+it will prompt them by saying
+
+```text
+--Invalid number. Must be between 0 and 255--
+```
+It will then call `get_number_from_client` again, with the same
+argument, and return the result from the additional call. 
+
+> Protip - get the function working without error checking, complete the
+> program and then fix the error checking (just because this is probably
+> the hardest part of this design). If you know about loops, you *should not* use one for this function. It can be done without using for or while. 
+
+
+#### Args
+* msg (str): a string for the message to print as part of the `input(msg)` call
+
+#### Returns 
+int: a number between 0 and 255. If a number outside that range 
+is entered, it will prompt the user to reenter until the range
+is valid. Does not check for invalid numbers, just range!  
+
+> Notice it returns an int value! You will need to cast!
+
+#### Flow Diagram
+
+Basic run
+
+```mermaid
+flowchart TD
+    main -- Red: --> get_number_from_client
+    get_number_from_client -- Red: --> input
+    input -- 155 --> get_number_from_client
+    get_number_from_client -- 155 --> main
+```
+
+A more complicated run
+
+```mermaid
+flowchart TD
+    main -- Red: --> get_number_from_client
+    get_number_from_client -- 1. Red: --> input
+    input -- 1. 300 --> get_number_from_client
+    get_number_from_client -- --Invalid number. Must be between 0 and 255-- --> print
+    get_number_from_client -- Red: --> get_number_from_client
+    get_number_from_client -- 2. Red: --> input
+    input -- 2. 155 --> get_number_from_client
+    get_number_from_client -- 155 --> main
+```
+
 
 
 ### `main`
@@ -235,7 +294,7 @@ the colorblind filters, followed by stating the colors are `different`
 or `too similar` using the return value of `run_checks` before
 ending the program. 
 
-For example:
+#### Example:
 
 Assume the client enters (230, 13,255) for the first color, and (123,200,255) for the second color.
 ```text
