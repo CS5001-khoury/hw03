@@ -119,4 +119,43 @@ flowchart TD
     check_tritanopia -- False --> run_checks
 ```
 
+### print_html_values
+Prints out the html values of each color as the standard
+color scheme, and the three color blind filters applied.
+
+For example if `print_html_values(230,13,255)` is called,
+will print out. 
+
+```
+	Standard:	    #e60dff
+	Protanopia:	    #0000ff
+	Deuteranopia:	#e600ff
+	Tritanopia:	    #e60d00
+```
+
+The spacing before the word and after are `\t` characters, so your
+spacing may vary. 
+
+#### Flow Diagram
+Using the example above with (230,13,255) the flow diagram could be.
+
+```mermaid 
+flowchart LR
+    print_html_values -- 1. 230,13,255 --> rgb_to_hex
+    print_html_values -- 2. 0, 0, 255 --> rgb_to_hex
+    print_html_values -- 3. 230,0,255 --> rgb_to_hex
+    print_html_values -- 4. 230,13,0 --> rgb_to_hex
+    rgb_to_hex -- 1. #e60dff --> print_html_values
+    rgb_to_hex -- 2. #0000ff --> print_html_values
+    rgb_to_hex -- 3. #e600ff --> print_html_values
+    rgb_to_hex -- 4. #e60d00 --> print_html_values
+    print_html_values -- \tStandard:\t#e60dff --> print
+    print_html_values -- \tProtanopia:\t#0000ff --> print
+    print_html_values -- \tDeuteranopia:\t#e600ff --> print
+    print_html_values -- \tTritanopia:\t#e60d00 --> print
+```
+
+1., 2., 3., 4. represent paired method calls and returns since rgb_to_hex is called four times at a minimum. The None return for `print` is not
+shown for simplicity. 
+
 ### `main()`
