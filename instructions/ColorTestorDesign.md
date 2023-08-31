@@ -18,7 +18,7 @@ what type should be returned.
 * main() -> None
 
 ### Provided functions
-The following functions are provided in [color_tester.py](color_tester.py) and should not be changed.
+The following functions are provided in [color_tester.py](../color_tester.py) and should not be changed.
 * rgb_to_hex(int, int, int) -> str - Provided
 * delta(int, int, int, int, int, int) -> float - Provided
 
