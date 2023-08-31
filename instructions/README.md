@@ -75,7 +75,7 @@ In this assignment, you will write a program that will test if a color is visibl
 There are many different types of color blindness. The most common is red-green color blindness. This is where the individual has trouble distinguishing between red and green. For this assignment, we will be filtering
 colors based on three types of color blindness: Protanopia, Deuteranopia, and Tritanopia.
 
-* Protanopia - Red is reduced in intensity.
+* Protanopia - Red and Green is reduced in intensity.
 * Deuteranopia - Green is reduced in intensity.
 * Tritanopia - Blue is reduced in intensity.
 
