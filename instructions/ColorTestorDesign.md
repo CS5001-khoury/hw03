@@ -24,7 +24,7 @@ True if the difference defined by `delta` is greater than `MIN_DIFFERENCE`
 
 #### Flow Diagram:
 Assume the client entered the colors (230,13,255) and (123,200,255), eventually main will call run_checks, which will then call different_colors
-with those values. To compare them without a color blindness filter. 
+with those values to compare them without a color blindness filter. 
 
 ```mermaid
 flowchart TD
