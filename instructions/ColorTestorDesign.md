@@ -3,6 +3,25 @@
 The following document loosely presents a design for Color Tester.
 Each function presented is required.
 
+## Functions Required
+You are required to implement from scratch, including the function call the following functions. You do not 
+have to do type hints, but using in the definition so you know what is being passed into each function and 
+what type should be returned.
+
+* different_colors(int, int, int, int, int, int) -> bool
+* check_protanopia(int, int, int, int, int, int) -> bool
+* check_deuteranopia(int, int, int, int, int, int) -> bool
+* check_tritanopia(int, int, int, int, int, int) -> bool
+* print_html_values(int, int, int) -> None
+* run_checks(int, int, int, int, int, int) -> bool
+* get_number_from_client(str) -> int
+* main() -> None
+
+### Provided functions
+The following functions are provided in [color_tester.py](color_tester.py) and should not be changed.
+* rgb_to_hex(int, int, int) -> str - Provided
+* delta(int, int, int, int, int, int) -> float - Provided
+
 
 ## Function Definitions
 
