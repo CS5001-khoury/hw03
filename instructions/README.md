@@ -88,9 +88,19 @@ RGB stands for Red, Green, Blue. It is a way of representing colors in a compute
 While the code is provided, you will also print out the HTML values for the colors. HTML colors are represented by a # followed by 6 hexadecimal digits. For example, white is #FFFFFF and black is #000000. A hexadecimal digit is a number between 0 and 9, or a letter between A and F. The letters A through F represent the numbers 10 through 15. For example, the number 10 in hexadecimal is A, and the number 15 in hexadecimal is F. As you are covering binary in CS 5002 which is a "base 2" notation of numbers, hexadecimal is a "base 16" notation of numbers compared to our standard "base 10" notation. The reason HTML uses hexadecimal is because it is a more compact way of representing colors, representing 3 bytes (0-255) of information in 6 digits.
 
 
+### Implementation and Testing
+You will find [ColorTesterDesign](ColorTesterDesign.md) in this folder. It is a design document that will help you break down the problem into smaller parts. You will want to read through this document, and then slowly practice
 
+* defining
+* documenting
+* implementing
+* testing
 
+for every function you are required to implement! Make sure to take it into small parts, and run and test your code regularly.  The over arching concept behind the project is your manager has given you this design document to work on and your job as a junior developer is to implement their design. In practice you are given more freedom as a developer, but this is a good way to practice breaking down a problem into smaller parts. 
 
+As you work on the project, take a look at some of the resources below. Sometimes seeing the actual colors it is generating is helpful to understanding the problem.
+
+👉🏽 **Task**  - Implement [color_tester.py](../color_tester.py) and [test_color_tester.py](../test_color_tester.py) using the information provided by [ColorTesterDesign](ColorTesterDesign.md)
 
 ## README.md
 As per usual, make sure you answer the questions in the [README.md](../README.md) file. They will require
