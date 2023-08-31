@@ -64,7 +64,33 @@ Feel free to make comments about logical errors and this process after this is d
 
 > Further Thinking, in an ideal world you would be writing each test after each function was written or in test driven development including agile development writing the test *before* the function is written!
 
-## 
+## Color Blindness Tester
+Roughly 8% of Northern European Descent are colorblind. However, application developers often fail to develop applications that can been seen by individuals with colorblindness, or even worse, they use colors to convey information that is not available in any other way. A recent example had a bus route applications that put 
+blue on green to indicate a bus was on time. This was not accessible to individuals with colorblindness.
+
+In this assignment, you will write a program that will test if a color is visible to individuals with colorblindness. 
+
+### Understanding Color Blindness
+
+There are many different types of color blindness. The most common is red-green color blindness. This is where the individual has trouble distinguishing between red and green. For this assignment, we will be filtering
+colors based on three types of color blindness: Protanopia, Deuteranopia, and Tritanopia.
+
+* Protanopia - Red is reduced in intensity.
+* Deuteranopia - Green is reduced in intensity.
+* Tritanopia - Blue is reduced in intensity.
+
+While this assignment over simplifies the testing of these colors (spoiler: this could be a fun final project to improve upon), it will give you a sense of how to use functions to break down a problem into smaller parts.
+
+### Understanding RGB Values
+
+RGB stands for Red, Green, Blue. It is a way of representing colors in a computer. Each color is represented by a number between 0 and 255. For example, the color white is represented by (255, 255, 255) and the color black is represented by (0, 0, 0). For this assignment we will be using RGB values. While true color is often a much wider range, and can include alpha (transparency) values, we will be using the simplified version.
+
+While the code is provided, you will also print out the HTML values for the colors. HTML colors are represented by a # followed by 6 hexadecimal digits. For example, white is #FFFFFF and black is #000000. A hexadecimal digit is a number between 0 and 9, or a letter between A and F. The letters A through F represent the numbers 10 through 15. For example, the number 10 in hexadecimal is A, and the number 15 in hexadecimal is F. As you are covering binary in CS 5002 which is a "base 2" notation of numbers, hexadecimal is a "base 16" notation of numbers compared to our standard "base 10" notation. The reason HTML uses hexadecimal is because it is a more compact way of representing colors, representing 3 bytes (0-255) of information in 6 digits.
+
+
+
+
+
 
 ## README.md
 As per usual, make sure you answer the questions in the [README.md](../README.md) file. They will require
@@ -75,6 +101,7 @@ further research, especially on your opinions about universal/inclusive design o
 * [What is Inclusive Design](http://www.inclusivedesigntoolkit.com/whatis/whatis.html)
 * [W3Schools Design Tips](https://www.w3.org/WAI/tips/designing/)
 * [10 Essential Guidelines for Colorblind Friendly Design](https://www.colorblindguide.com/post/colorblind-friendly-design-3)
+* [Color Blindness Simulator](https://www.color-blindness.com/coblis-color-blindness-simulator/)
 
 ## Grading Rubric
 
