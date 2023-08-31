@@ -127,10 +127,10 @@ For example if `print_html_values(230,13,255)` is called,
 will print out. 
 
 ```
-	Standard:	    #e60dff
-	Protanopia:	    #0000ff
+	Standard:   #e60dff
+	Protanopia: #0000ff
 	Deuteranopia:	#e600ff
-	Tritanopia:	    #e60d00
+	Tritanopia: #e60d00
 ```
 
 The spacing before the word and after are `\t` characters, so your
