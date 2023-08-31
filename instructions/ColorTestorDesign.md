@@ -6,7 +6,7 @@ Each function presented is required.
 
 ## Function Definitions
 
-### check_difference
+### different_colors
 
 Compares two color RBG values to see how different they are.  Does
 not convert, only compares.
@@ -23,15 +23,15 @@ not convert, only compares.
 True if the difference defined by `delta` is greater than `MIN_DIFFERENCE`
 
 #### Flow Diagram:
-Assume the client entered the colors (230,13,255) and (123,200,255), eventually main will call run_checks, which will then call check_difference
+Assume the client entered the colors (230,13,255) and (123,200,255), eventually main will call run_checks, which will then call different_colors
 with those values. To compare them without a color blindness filter. 
 
 ```mermaid
 flowchart TD
-    run_checks -- 230,13,255,123,200,255 --> check_difference
-    check_difference -- 230,13,255,123,200,255 --> delta
-    delta -- 0.4875 --> check_difference
-    check_difference -- True --> run_checks
+    run_checks -- 230,13,255,123,200,255 --> different_colors
+    different_colors -- 230,13,255,123,200,255 --> delta
+    delta -- 0.4875 --> different_colors
+    different_colors -- True --> run_checks
 ```
 
 
@@ -63,8 +63,8 @@ with those values.
 ```mermaid
 flowchart TD
     run_checks -- 230,13,255,123,200,255 --> check_protanopia
-    check_protanopia -- 0,0,255,0,0,255 --> check_difference
-    check_difference -- False --> check_protanopia
+    check_protanopia -- 0,0,255,0,0,255 --> different_colors
+    different_colors -- False --> check_protanopia
     check_protanopia -- False --> run_checks
 ```
 
@@ -89,8 +89,8 @@ Assume the client entered the colors (230,13,255) and (200,200,255), eventually 
 ```mermaid
 flowchart TD
     run_checks -- 230,13,255,200,0,255 --> check_deuteranopia
-    check_deuteranopia -- 230,0,255,200,0,255 --> check_difference
-    check_difference -- False --> check_deuteranopia
+    check_deuteranopia -- 230,0,255,200,0,255 --> different_colors
+    different_colors -- False --> check_deuteranopia
     check_deuteranopia -- False --> run_checks
 ```
 
@@ -114,8 +114,8 @@ Assume the client entered the colors (230,13,255) and (200,200,255), eventually 
 ```mermaid
 flowchart TD
     run_checks -- 230,13,255,200,0,255 --> check_tritanopia
-    check_tritanopia -- 230,13,0,200,0,0 --> check_difference
-    check_difference -- False --> check_tritanopia
+    check_tritanopia -- 230,13,0,200,0,0 --> different_colors
+    different_colors -- False --> check_tritanopia
     check_tritanopia -- False --> run_checks
 ```
 
@@ -324,3 +324,20 @@ Deuteranopia:  Different
 Tritanopia:  Different
 The colors are too similar.
 ```
+
+## Design Suggestions
+
+This is the type of application that it helps to build from the "inside" out. Two methods are already given to you. `delta(int,int,int,int,int,int)` and `rgb_to_hex(int,int,int)`. You should use these methods to build the other methods.
+
+For example, you could build `different_colors` first, and then use that to build `check_protanopia`, `check_deuteranopia`, and `check_tritanopia`. Or you could start with print_html_values, and partially work on the main, and go back and forth.
+
+The former method is easier, and actually more like how you would build a large program. The reason being is after you write each function, you can test it. If you write `different_colors` first, you can test it by writing a test function that calls `different_colors` with different values. You can then write `check_protanopia` and test it by calling `check_protanopia` with different values.
+
+[test_color_tester.py](../test_color_tester.py) is a file that you can add your tests to. You should use the provided test as an idea for a template.
+
+> You do not have to write unit tests `print_html_values` or `main`. Both these functions return `None` and only
+> print to the screen. As such, those tests will be done by running the program with different inputs and 
+> double checking the results. With that said. You can write tests for them if you want, and you will want to explore how to capture the stdout context. This is a much more advanced technique that we won't cover in this course, but comes up more in 5004.  
+
+
+Make sure to test all functions that return a value with a variety of inputs BEFORE you submit to gradescope. 
