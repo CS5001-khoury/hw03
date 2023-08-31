@@ -6,7 +6,7 @@ Semester: UPDATE
 
 Run tests on game_helper
 """
-from game_helper import area_sq, area_rec, vol_cube, area_triangle, can_add, roll_dice, vol_pyramid
+import game_helper
 
 ### example main, use as you want. 
 def main() -> None:
