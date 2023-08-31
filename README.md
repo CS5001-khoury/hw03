@@ -1,4 +1,4 @@
-# Homework 01 - Submission
+# Homework 03 - Submission
 
 
 * Student: YOUR NAME
@@ -13,6 +13,13 @@
 
 ## Module Specific
 
+1. Add your test_game_helper.py output below in the text box.
+    ```text
+
+    replace with your output
+
+
+    ```
 
 
 ## Deeper Thinking
