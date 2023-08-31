@@ -12,38 +12,12 @@ As you work on this assignment, remember the order:
 
 For every function, you define it, you document it, you implement it, and then you test it - **Before** moving onto the next function!
 
-> Please note, for this assignment you will be adding to your README.md as you work. You will actually want to create that first!
-> We will highlight questions to answer in the README.md as you are working!
->
-> To make grading easier, we ask that you use the following template for your README.md
-> ````text
-> # Homework 3: Readme
-> 
-> * Semester: UPDATE
-> * Student: Your name
-> 
-> ## game_helper error tracking
-> * syntax error one
-> * syntax error two..
-> * etc
->
-> ```text
-> output of your test_game_helper.py run
-> ```
-> Comments about Logical errors and questions
->
-> 
-> ## Reflection and Further Thinking
->
->````
-> This format will help make is easier for the grader to quickly find the sections of your file. As a reminder, you can use 
-> any text editor for your markdown file, just make sure to save the extension as .md
 
 
 
-## Game Helper Tests
+## Game Helper: Practice at Finding Errors and Writing Tests
 
-Download [game_helper.py](game_helper.py). It is a file with a series of isolated functions written by another programmer. One thing you will note is there are type hints in the file. This is standard practice in industry, and they are correct! (and won't affect your tests/running). The docstring style used is also standard, and follows the [Google Style Guide](https://google.github.io/styleguide/pyguide.html#383-functions-and-methods) on docstrings. 
+Download [game_helper.py](../game_helper.py). It is a file with a series of isolated functions written by another programmer. One thing you will note is there are type hints in the file. This is standard practice in industry, and they are correct! (and won't affect your tests/running). The docstring style used is also standard, and follows the [Google Style Guide](https://google.github.io/styleguide/pyguide.html#383-functions-and-methods) on docstrings. 
 
 👉🏽 **Task** Fix the Syntax Errors in the file. You can run it to find them. 
 * For each error, put a line in the game_helper documenting the Syntax error, and how you fixed it. 
@@ -52,17 +26,11 @@ Download [game_helper.py](game_helper.py). It is a file with a series of isolate
 
 👉🏽 **Task** Create a file called **test_game_helper.py**. 
 * Include the standard docstring at the top of the file you have seen in all your other assignment files. 
-* We have provided a template file [test_game_helper.py](test_game_helper.py) as an example.
+* We have provided a template file [test_game_helper.py](../test_game_helper.py) as an example.
 * Write a test for *every* function in game_helper.py, each test should be labeled test_function. For example, a function that tests `area_sq(length: float)`, the function you write should be called `test_area_sq()`.
-* To help with the auto-grader, please use the following import line  
-```python
-from .game_helper import area_sq, area_rec, vol_cube, area_triangle, can_add, roll_dice, vol_pyramid
-```
-* while the above line is not standard, it will help with path conflict issues with the auto-grader.
 * In each function, you must write **at least two** tests to test each function. The test function will return the number of tests failed, while also printing information about the tests!
-* Finally, you should add a main function that calls all the tests, and then prints out the total tests failed. 
-  * The last line printed **has** to be 'Failed # tests.' where # is the number of tests failed.
-
+* Finally, you should modify main function that calls all the tests, and then prints out the total tests failed. 
+  
 Here is an example run using our test_game_helper.py.
 
 ```text
@@ -89,26 +57,24 @@ Failed 10 tests.
 ```
 (btw using the ```text block is how that block was generated in this readme)
 
-👉🏽 **Task**  Add the output of the run into your README.md, so TAs can see your output before your errors were fixed.
+👉🏽 **Task**  Add the output of the run of your test_game_helper.py into your [README.md](../README.md), so TAs can see your output **before** your errors were fixed.
 
-👉🏽 **Task** Fix each logical error until your tests generate 0 errors. 
-* Feel free to make comments about logical errors and this process after this is done
+👉🏽 **Task** Fix each logical error until your tests generate 0 errors.   
+Feel free to make comments about logical errors and this process after this is done
 
 > Further Thinking, in an ideal world you would be writing each test after each function was written or in test driven development including agile development writing the test *before* the function is written!
 
-## Star Rating App
+## 
 
-For this part of the homework, make sure to complete the [Design Activity](https://github.com/CS5001-khoury/Handouts/raw/main/Module3/design_star_rating_app.docx) first. You will turn in a PDF of the design activity, and make sure to include all the names of the people who worked with you on it (since it can be done with others). 
+## README.md
+As per usual, make sure you answer the questions in the [README.md](../README.md) file. They will require
+further research, especially on your opinions about universal/inclusive design of applications. 
 
-Based on the activity, you will want to use the [star_rating_app.py](star_rating_app.py) as a template file. The function names matter so we can unit test and grade - so please use the template. You can add functions, but do not take away any of the provided functions as we will be using them in our tests. 
-
-
-👉🏽 **Task** Complete the Star Rating App, and submit both star_rating_app.py and test_star_rating_app.py. Note that testing client input and output can be difficult, as the tests are interactive. That is fine. You can add comments talking about how you did the interactive test. However, the important part is to make sure you test your work before submitting. 
-
-
-## Reflection
-
-👉🏽 **Task** In your README.md add a small paragraph reflection of your learning and progress. Remember, this is not just a list of items, but we encourage you to critically evaluate and think about your learning process. There is a lot of research as to the benefits of reflection and retention of information - especially related to computer science!
+### Inclusive Design Resources
+* [Microsoft Inclusive Design](https://inclusive.microsoft.design/)
+* [What is Inclusive Design](http://www.inclusivedesigntoolkit.com/whatis/whatis.html)
+* [W3Schools Design Tips](https://www.w3.org/WAI/tips/designing/)
+* [10 Essential Guidelines for Colorblind Friendly Design](https://www.colorblindguide.com/post/colorblind-friendly-design-3)
 
 ## Grading Rubric
 
@@ -116,9 +82,8 @@ Based on the activity, you will want to use the [star_rating_app.py](star_rating
 Your final submission will consist of the following files:
 * game_helper.py
 * test_game_helper.py
-* star_rating_app.py
-* test_star_rating_app.py
-* design_star_rating.pdf 
+* color_test.py
+* test_color_tester.py
 * README.md
 
 
