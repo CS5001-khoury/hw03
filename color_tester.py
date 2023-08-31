@@ -18,9 +18,9 @@ def delta(red_one: int, green_one: int, blue_one: int, red_two: int, green_two: 
     into account hue or saturation differences. If you are curious
     about a more standard approach, one should look up the CIEDE2000 formula. 
 
-    squares = (R_1 - R_2)^2 + (G_1 - G_2)^2 + (B_1 - B2)^2
-    root = sqrt(squares)  # the two lines are known as the euclidean distance and common for a lot of things
-    scaled = floor(root) / 441  #scales the distance between 0 and 1
+    euclidean = (R_1 - R_2)^2 + (G_1 - G_2)^2 + (B_1 - B2)^2
+    euclidean = sqrt(euclidean)  # the two lines are known as the euclidean distance and common for a lot of things
+    scaled = floor(euclidean) / 441  #scales the distance between 0 and 1
 
     Args:
         red_one (int): a color range between 0 and 255 representing the red for the first color
