@@ -297,7 +297,7 @@ for one color, and then red, blue, and green for a second color.
 
 It will then print the HTML values for color 1 with the colorblind filters
 applied, and the HTML values for Color 2 with the colorblind filters
-applied using ``print_html_values`.
+applied using `print_html_values`.
 
 It will then call `run_checks` to print if the colors are different given
 the colorblind filters, followed by stating the colors are `different`
