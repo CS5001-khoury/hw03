@@ -41,7 +41,7 @@ Compares two RBG values checking to see if when the colors are seen
 by someone with protanopia, they are to similar. 
 
 > Protanopia is when there is 0 red and greens and only blues, so
-when comparing, all colors become their blue value only. 
+> when comparing, all colors become their blue value only. 
 
 
 
@@ -54,7 +54,7 @@ when comparing, all colors become their blue value only.
 * blue_two (int): a color range between 0 and 255 representing the blue for the second color
 
 #### Returns
-boolean: returns true if the colors are two similar when someone has protanopia
+boolean: returns true if the colors are too similar when someone has protanopia
 
 #### Flow Diagram
 Assume the client entered the colors (230,13,255) and (123,200,255), eventually main will call run_checks, which will then call check_protanopia
@@ -78,7 +78,7 @@ deuteranopia.
 Same
 
 #### Returns
-boolean: returns true if the colors are two similar when someone has deuteranopia.
+boolean: returns true if the colors are too similar when someone has deuteranopia.
 
 > Deuteranopia: Defined as when someone looses all greens in an RGB value scheme
 
@@ -105,7 +105,7 @@ tritanopia.
 Same
 
 #### Returns
-boolean: returns true if the colors are two similar when someone has tritanopia
+boolean: returns true if the colors are too similar when someone has tritanopia
 
 
 #### Flow Diagram
@@ -160,7 +160,7 @@ flowchart LR
     print_html_values -- \tTritanopia:\t#e60d00 --> print
 ```
 
-1., 2., 3., 4. represent paired method calls and returns since rgb_to_hex is called four times at a minimum. The None return for `print` is not
+1., 2., 3., 4. represent paired function calls and returns since rgb_to_hex is called four times at a minimum. The `None` return for `print` is not
 shown for simplicity. 
 
 
@@ -172,7 +172,7 @@ print out if there is a difference or not before
 returning the result. 
 
 For example, if the following is called
-```run_checks(230, 13,255, 123,200,255)``` run Checks will
+```run_checks(230, 13,255, 123,200,255)``` it will
 print.
 
 ```
@@ -194,7 +194,7 @@ indent.
 
 
 #### Returns:
-bool: True if every color is different under all vision types, but False if only one vision type the colors are two similar.
+bool: True if every color is different under all vision types, but False if only one vision type the colors are too similar.
 
 
 #### Flow Diagram
@@ -327,7 +327,7 @@ The colors are too similar.
 
 ## Design Suggestions
 
-This is the type of application that it helps to build from the "inside" out. Two methods are already given to you. `delta(int,int,int,int,int,int)` and `rgb_to_hex(int,int,int)`. You should use these methods to build the other methods.
+This is the type of application that it helps to build from the "inside" out. Two functions are already given to you. `delta(int,int,int,int,int,int)` and `rgb_to_hex(int,int,int)`. You should use these methods to build the other methods.
 
 For example, you could build `different_colors` first, and then use that to build `check_protanopia`, `check_deuteranopia`, and `check_tritanopia`. Or you could start with print_html_values, and partially work on the main, and go back and forth.
 
