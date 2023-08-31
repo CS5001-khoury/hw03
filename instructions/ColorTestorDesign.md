@@ -75,7 +75,12 @@ of checking for protanopia checks colors with
 deuteranopia. 
 
 #### Args
-Same
+* red_one (int): a color range between 0 and 255 representing the red for the first color
+* green_one (int): a color range between 0 and 255 representing the green for the first color
+* blue_one (int):a color range between 0 and 255 representing the blue for the first color
+* red_two (int): a color range between 0 and 255 representing the red for the second color
+* green_two (int): a color range between 0 and 255 representing the green for the second color
+* blue_two (int): a color range between 0 and 255 representing the blue for the second color
 
 #### Returns
 boolean: returns true if the colors are too similar when someone has deuteranopia.
@@ -102,7 +107,12 @@ tritanopia.
 > Tritanopia is when someone sees only red and green values of an RGB color scheme.
 
 #### Args
-Same
+* red_one (int): a color range between 0 and 255 representing the red for the first color
+* green_one (int): a color range between 0 and 255 representing the green for the first color
+* blue_one (int):a color range between 0 and 255 representing the blue for the first color
+* red_two (int): a color range between 0 and 255 representing the red for the second color
+* green_two (int): a color range between 0 and 255 representing the green for the second color
+* blue_two (int): a color range between 0 and 255 representing the blue for the second color
 
 #### Returns
 boolean: returns true if the colors are too similar when someone has tritanopia
