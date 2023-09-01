@@ -9,7 +9,7 @@ import math
 
 MIN_DIFFERENCE = .20
 
-       
+
 # provided functions, no need to change
 
 def delta(red_one: int, green_one: int, blue_one: int, red_two: int, green_two: int, blue_two: int) -> float:
@@ -55,16 +55,9 @@ def rgb_to_hex(red: int, green: int, blue: int) -> str:
 
 ## end provided functions
 
-
-
-
-
-
-
-
 def main():
     pass # replace
-    
+
 
 if __name__ == "__main__":
     main()
