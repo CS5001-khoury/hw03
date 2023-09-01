@@ -129,23 +129,20 @@ Your final submission will consist of the following files:
    * game_helper properly corrected and passes tests
    * test_game_helper has the required functions
 2. Approaching  (AG)
-   * star_rating_app works with simple entries and ratings
+   * color_tester.py properly implemented color_difference, and blindness filters
+   * test_color_tester.py has the required functions
+   * get_number_from_client works in basic cases
+   * run_checks returns proper value
 3. Meets  (AG)
-   * test_game_helper catches errors on another version of game_helper 
-     * Same functions but  may hold different logical errors
-   * star_rating_app works with more complex entry
-     * case change on add,list,exit or doesn't break when using wrong words
-     * properly using constants throughout code
+   * color_tester.py properly implemented print_html_values and main()
+   * get_number_from_client properly handles 0 <= n <= 255 
    * Both game_helper and star_rating pass python style checker
 4. Exceeds  (MG)
    * test_game_helper.py has at least two tests for every function in game_helper.py
    * output is accurately reported in README.md
-   * test_star_rating_app has reasonable tests in it
+   * test_color_tester.py has testing function for every function in color_tester.py (excluding main, and print_html_values, and provided functions)
    * All .py files include proper docstrings - both file header and function level
-   * design_star_rating.pdf has been completed properly 
-     * If you worked as a group on it, you all need to submit even if the document is the same, and include everyone's name on the document
-   * README.md defines syntax errors fixed
-   * README.md includes at least a paragraph reflection.
+   * README.md questions answered correctly, showing research and deeper knowledge
 
 
 AG - Auto-graded  
