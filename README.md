@@ -35,12 +35,12 @@
 9. Take a look at the following code:
     ```python
     def get_name(which):
-    if which == 1:
-        which = 13
-        return "Who"
-    else:
-        which = 3
-        return "Strange"
+        if which == 1:
+            which = 13
+            return "Who"
+        else:
+            which = 3
+            return "Strange"
 
     def welcome():
         print("Welcome Doctor?")
