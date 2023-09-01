@@ -131,12 +131,12 @@ Your final submission will consist of the following files:
 2. Approaching  (AG)
    * color_tester.py properly implemented color_difference, and blindness filters
    * test_color_tester.py has the required functions
-   * get_number_from_client works in basic cases
-   * run_checks returns proper value
+   * get_number_from_client works in basic cases between 0 and 255
+   * run_checks returns proper value, and prints properly
 3. Meets  (AG)
-   * color_tester.py properly implemented print_html_values and main()
-   * get_number_from_client properly handles 0 <= n <= 255 
-   * Both game_helper and star_rating pass python style checker
+   * get_number_from_client properly handles invalid input not in 0 <= n <= 255
+     * also prints error message properly 
+   * game_helper, test_game_helper and color_tester pass python style checker
 4. Exceeds  (MG)
    * test_game_helper.py has at least two tests for every function in game_helper.py
    * output is accurately reported in README.md
