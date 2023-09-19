@@ -55,8 +55,51 @@ def rgb_to_hex(red: int, green: int, blue: int) -> str:
 
 ## end provided functions
 
+# add your functions here - remember to indent properly! so def 
+# starts on the far side, then everything is indented under for each function, use the other functions as examples
+
+
 def main():
-    pass # replace
+    """
+    Main driver of the program.
+
+    1. Welcomes the client
+    2. Prompts them to enter two colors, by asking for the
+       RBG values for the first color, and then second. 
+    3. Displays the HTML values for the each color including the variations
+       they would look like with various types of color blindness.
+    4. Runs checks on each of the colors to determine similarity
+    5. If the colors are two similar prints "The colors are too similar", 
+       or states they are different if they are different enough.
+    6. ends program
+    """
+    # UNCOMMENT lines after you finish the related functions!! 
+    # You will probably finish other functions and **test** them
+    # well before you uncomment parts of the main!
+
+    # print("Welcome to color checker.")
+    # print("Enter the RGB values for two colors.")
+    # print("Enter your first color:")
+    # red_one = get_number_from_client("Red: ")
+    # green_one = get_number_from_client("Green: ")
+    # blue_one = get_number_from_client("Blue: ")
+    # print("Enter your second color:")
+    # red_two = get_number_from_client("Red: ")
+    # green_two = get_number_from_client("Green: ")
+    # blue_two = get_number_from_client("Blue: ")
+
+    # print("The HTML values for the Color 1 are: ")
+    # print_html_values(red_one, green_one, blue_one)
+    # print("The HTML values for the Color 2 are: ")
+    # print_html_values(red_two, green_two, blue_two)
+
+    # valid = run_checks(red_one, green_one, blue_one, red_two, green_two, blue_two)
+
+    # if valid:
+    #    print("The colors are different.")
+    # else:
+    #    print("The colors are too similar.")
+
 
 
 if __name__ == "__main__":
