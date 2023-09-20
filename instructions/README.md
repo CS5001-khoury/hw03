@@ -27,7 +27,23 @@ Download [game_helper.py](../game_helper.py). It is a file with a series of isol
 👉🏽 **Task** Create a file called **test_game_helper.py**. 
 * Include the standard docstring at the top of the file you have seen in all your other assignment files. 
 * We have provided a template file [test_game_helper.py](../test_game_helper.py) as an example.
-* Write a test for *every* function in game_helper.py, each test should be labeled test_function. For example, a function that tests `area_sq(length: float)`, the function you write should be called `test_area_sq()`.
+* Write a test for *every* function in game_helper.py, each test should be labeled test_function. For example, a function that tests `area_sq(length: float)`, the function you write should be called `test_area_sq()`. For example:
+  * 
+  ```python
+  def test_area_sq() -> int:
+    """Test function for area_sq"""
+    print("Testing area_sq")
+    fail_count = 0
+    if (game_helper.area_sq(5) != 25.0):
+        fail_count += 1
+        print("....Failed area_sq(5)")
+    if (game_helper.area_sq(10.5) != 110.25):
+        fail_count += 1
+        print("....Failed area_sq(10.5)")
+    if (game_helper.fail_count < 1):
+        print("....all tests passed for area_sq()")
+    return fail_count
+    ```
 * In each function, you must write **at least two** tests to test each function. The test function will return the number of tests failed, while also printing information about the tests!
 * Finally, you should modify main function that calls all the tests, and then prints out the total tests failed. 
   
